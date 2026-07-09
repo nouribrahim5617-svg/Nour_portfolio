@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nour Eldin Ibrahim — Architecture Portfolio</title>
+  <meta name="description" content="Architecture portfolio of Nour Eldin Ibrahim — RIBA Part 1, 2× award-winning. Selected works, drawings and process." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,200;9..144,300;9..144,400;9..144,500;9..144,700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Page loader -->
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <span class="loader__name">NOUR ELDIN IBRAHIM</span>
+      <span class="loader__count" id="loaderCount">00</span>
+    </div>
+    <div class="loader__bar"><span id="loaderBar"></span></div>
+  </div>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor cursor--ring" id="cursorRing"></div>
+
+  <!-- Top nav — persistent blue pill -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__brand" data-cursor="link">
+      <span class="nav__brand-mark">N·I</span>
+      <span class="nav__brand-name">Nour Eldin Ibrahim</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#hero"     class="nav__link" data-cursor="link"><span>01</span> Home</a>
+      <a href="#about"    class="nav__link" data-cursor="link"><span>02</span> About</a>
+      <a href="#projects" class="nav__link" data-cursor="link"><span>03</span> Projects</a>
+      <a href="#contact"  class="nav__link" data-cursor="link"><span>04</span> Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__meta hero__meta--tl">
+      <span>[ Portfolio ]</span>
+      <span>2022 — 2026</span>
+    </div>
+    <div class="hero__meta hero__meta--tr">
+      <span>Beirut, LB</span>
+      <span>↘ Scroll</span>
+    </div>
+
+    <div class="hero__media" aria-hidden="true">
+      <video
+        id="heroVideo"
+        class="hero__video"
+        src="assets/video/hero.mp4"
+        muted
+        playsinline
+        preload="auto"
+        disablepictureinpicture
+      ></video>
+      <div class="hero__media-overlay"></div>
+    </div>
+
+    <div class="hero__content">
+      <h1 class="hero__title">
+        <span class="line"><em>Nour Eldin</em> Ibrahim</span>
+        <span class="line line--sub">Architecture Designer &amp; Visualizer · RIBA Part 1 · 2× Award-Winning</span>
+      </h1>
+      <p class="hero__intro">
+        Selected works <span class="dot">●</span> 2022 — 2026 <span class="dot">●</span>
+        Studio, competition, and internship projects across Beirut, Cairo, Rome and beyond.
+      </p>
+    </div>
+
+    <div class="hero__meta hero__meta--bl"><span>↓ Begin</span></div>
+    <div class="hero__meta hero__meta--br"><span>v.02 — Portfolio</span></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section-head">
+      <span class="section-head__index">[ 02 ]</span>
+      <span class="section-head__label">About</span>
+    </div>
+
+    <div class="about__grid">
+      <div class="about__photo reveal" data-cursor="hover">
+        <div class="about__photo-frame">
+          <img src="Profile Photo.jpg" alt="Nour Eldin Ibrahim" />
+        </div>
+        <div class="about__caption">
+          <span>Nour Eldin Ibrahim</span>
+          <span>↪ RIBA Part 1</span>
+        </div>
+      </div>
+
+      <div class="about__text">
+        <h2 class="about__title reveal">
+          Architecture as a discipline that shapes
+          <em>human behaviour</em>
+          and <em>psychology</em>.
+        </h2>
+        <p class="reveal">
+          I'm drawn to architecture as the discipline that shapes how people feel and move — the
+          way a threshold, a shared courtyard, or a carefully placed opening can alter a daily
+          ritual. My work gravitates toward community-centred design: revitalising neglected
+          public spaces, exploring the humanitarian potential of material-conscious construction,
+          and asking who architecture is ultimately built for.
+        </p>
+        <p class="reveal">
+          Competitions have become my primary mode of inquiry — a discipline for testing ideas
+          beyond the studio. Across studio, internship and competition work I've collaborated with
+          <em>Algorithm Architects</em> (Rome), <em>LDRS Chehab &amp; Partners</em> (Beirut),
+          <em>Narratives Architectural Consulting</em> (Cairo), and the <em>Hariri Foundation</em>.
+        </p>
+
+        <div class="about__facts">
+          <div class="fact reveal">
+            <span class="fact__num">11</span>
+            <span class="fact__lbl">Selected projects</span>
+          </div>
+          <div class="fact reveal">
+            <span class="fact__num">2×</span>
+            <span class="fact__lbl">Award-winning</span>
+          </div>
+          <div class="fact reveal">
+            <span class="fact__num">3.88</span>
+            <span class="fact__lbl">GPA · BAU, RIBA Part 1</span>
+          </div>
+          <div class="fact reveal">
+            <span class="fact__num">04</span>
+            <span class="fact__lbl">Internships · BL · IT · EG</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="section-head">
+      <span class="section-head__index">[ 03 ]</span>
+      <span class="section-head__label">Selected Work</span>
+    </div>
+
+    <h2 class="projects__title">
+      <em>Eleven</em> projects.<br />
+      Hover to reveal · click to enter.
+    </h2>
+
+    <div class="projects__grid" id="projectsGrid">
+
+      <!-- 01 — Jbeil Design District (Arthub) -->
+      <a class="project-card" href="projects/project-01.html" data-cursor="enter" style="--card-accent:#A8513A">
+        <img class="project-card__img" src="Arthub Project/main 01.jpg" alt="" loading="lazy" />
+        <div class="project-card__inner">
+          <div class="project-card__num">1</div>
+          <div class="project-card__meta">
+            <span class="project-card__tag">[ University studio ]</span>
+            <span class="project-card__title">Jbeil Design District</span>
+            <span class="project-card__sub">Byblos, Lebanon · Art-hub</span>
+            <span class="project-card__scope">BAU studio</span>
+            <span class="project-card__arrow">↗</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 02 — Asylum Block A / DNSC -->
+      <a class="project-card" href="projects/project-02.html" data-cursor="enter" style="--card-accent:#902313">
+        <img class="project-card__img" src="DNSC 1st place/edited main.jpg" alt="" loading="lazy" />
+        <div class="project-card__inner">
+          <div class="project-card__num">2</div>
+          <div class="project-card__meta">
+            <span class="project-card__tag">[ 1st place · Intl. competition ]</span>
+            <span class="project-card__title">Asylum Block A</span>
+            <span class="project-card__sub">Refuge · Competition winner</span>
+            <span class="project-card__scope">International competition</span>
+            <span class="project-card__arrow">↗</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 03 — Kaira Loroo -->
+      <a class="project-card" href="projects/project-03.html" data-cursor="enter" style="--card-accent:#C28B47">
+        <img class="project-card__img" src="Kaira loroo/finalized main shot.jpg" alt="" loading="lazy" />
+        <div class="project-card__inner">
+          <div class="project-card__num">3</div>
+          <div class="project-card__meta">
+            <span class="project-card__tag">[ Intl. competition ]</span>
+            <span class="project-card__title">Kaira Loroo</span>
+            <span class="project-card__sub">Nursery · Senegal</span>
+            <span class="project-card__scope">Kaira Looro 2025</span>
+            <span class="project-card__arrow">↗</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 04 — Urban Seedbed -->
+      <a class="project-card" href="projects/project-04.html" data-cursor="enter" style="--card-accent:#7E8C5E">
+        <img class="project-card__img" src="Urban Seedbed/Top View.jpg" alt="" loading="lazy" />
+        <div class="project-card__inner">
+          <div class="project-card__num">4</div>
+          <div class="project-card__meta">
+            <span class="project-card__tag">[ University studio ]</span>
+            <span class="project-card__title">Urban Seedbed</span>
+            <span class="project-card__sub">Al Hadath, Beirut · Affordable housing</span>
+            <span class="project-card__scope">BAU studio</span>
+            <span class="project-card__arrow">↗</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 05 — Ekramy Villa -->
+      <a class="project-card" href="projects/project-05.html" data-cursor="enter" style="--card-accent:#8B6240">
+        <img class="project-card__img" src="Interior project - Ekramy villa cairo/living 4.jpg" alt="" loading="lazy" />
+        <div class="project-card__inner">
+          <div class="project-card__num">5</div>
+          <div class="project-card__meta">
+            <span class="project-card__tag">[ Collab · Narratives ]</span>
+            <span class="project-card__title">Ekramy Villa</span>
+            <span class="project-card__sub">Cairo, EG · Interior design</span>
+            <span class="project-card__scope">Narratives Architectural Consulting</span>
+            <span class="project-card__arrow">↗</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 06 — Hamra Residential Towers -->
+      <a class="project-card" href="projects/project-06.html" data-cursor="enter" style="--card-accent:#6E5A48">
+        <img class="project-card__img" src="New projects to be added/Hamra project/Untitled.jpg" alt="" loading="lazy" />
+        <div class="project-card__inner">
+          <div class="project-card__num">6</div>
+          <div class="project-card__meta">
+            <span class="project-card__tag">[ Collab · LDRS Chehab ]</span>
+            <span class="project-card__title">Hamra Tower</span>
+            <span class="project-card__sub">Hamra, Beirut · Residential</span>
+            <span class="project-card__scope">LDRS Chehab &amp; Partners</span>
+            <span class="project-card__arrow">↗</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 07 — Hospice AD'OR -->
+      <a class="project-card" href="projects/project-07.html" data-cursor="enter" style="--card-accent:#C9985B">
+        <img class="project-card__img" src="New projects to be added/Hospice/PERSPECTICVE 2 MODIFICATIONS.jpg" alt="" loading="lazy" />
+        <div class="project-card__inner">
+          <div class="project-card__num">7</div>
+          <div class="project-card__meta">
+            <span class="project-card__tag">[ Intl. competition · Algorithm ]</span>
+            <span class="project-card__title">AD'OR Hospice</span>
+            <span class="project-card__sub">Siwa Oasis, Egypt · Buildner #5</span>
+            <span class="project-card__scope">Shortlisted · Algorithm Architects</span>
+            <span class="project-card__arrow">↗</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 08 — Italy Milano MVRDV -->
+      <a class="project-card" href="projects/project-08.html" data-cursor="enter" style="--card-accent:#A6553C">
+        <img class="project-card__img" src="New projects to be added/Italy Milano Mvrdv Project/Main Render.jpg" alt="" loading="lazy" />
+        <div class="project-card__inner">
+          <div class="project-card__num">8</div>
+          <div class="project-card__meta">
+            <span class="project-card__tag">[ Collab · MVRDV ]</span>
+            <span class="project-card__title">Italy Milano Community</span>
+            <span class="project-card__sub">Milan, IT · Community insertion</span>
+            <span class="project-card__scope">MVRDV × Algorithm Studio</span>
+            <span class="project-card__arrow">↗</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 09 — Luxor Order of Engineers -->
+      <a class="project-card" href="projects/project-09.html" data-cursor="enter" style="--card-accent:#C68945">
+        <img class="project-card__img" src="New projects to be added/Luxor Order of enigneers syndicate project/entrance shot updated.jpg" alt="" loading="lazy" />
+        <div class="project-card__inner">
+          <div class="project-card__num">9</div>
+          <div class="project-card__meta">
+            <span class="project-card__tag">[ National competition · 55 firms ]</span>
+            <span class="project-card__title">Luxor Engineers HQ</span>
+            <span class="project-card__sub">Luxor, EG · Recognition Award</span>
+            <span class="project-card__scope">Algorithm Architects · Team lead</span>
+            <span class="project-card__arrow">↗</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 10 — Research Centre -->
+      <a class="project-card" href="projects/project-10.html" data-cursor="enter" style="--card-accent:#8DA08B">
+        <img class="project-card__img" src="New projects to be added/Research Centre/presopective.jpg" alt="" loading="lazy" />
+        <div class="project-card__inner">
+          <div class="project-card__num">10</div>
+          <div class="project-card__meta">
+            <span class="project-card__tag">[ University studio ]</span>
+            <span class="project-card__title">Research Centre</span>
+            <span class="project-card__sub">Ecological campus insertion</span>
+            <span class="project-card__scope">BAU studio</span>
+            <span class="project-card__arrow">↗</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 11 — Saida Active and Vibrant City -->
+      <a class="project-card" href="projects/project-11.html" data-cursor="enter" style="--card-accent:#5B7990">
+        <img class="project-card__img" src="New projects to be added/Saida Active and vibrant city/Main perspective.jpg" alt="" loading="lazy" />
+        <div class="project-card__inner">
+          <div class="project-card__num">11</div>
+          <div class="project-card__meta">
+            <span class="project-card__tag">[ Collab · Hariri Foundation ]</span>
+            <span class="project-card__title">Saida — Active &amp; Vibrant</span>
+            <span class="project-card__sub">Saida, Lebanon · Urban revival</span>
+            <span class="project-card__scope">Hariri Foundation / OLA</span>
+            <span class="project-card__arrow">↗</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-head">
+      <span class="section-head__index">[ 04 ]</span>
+      <span class="section-head__label">Contact</span>
+    </div>
+
+    <div class="contact__inner">
+      <h2 class="contact__title">
+        <em>Let's</em> build<br />
+        something <em>together</em>.
+      </h2>
+
+      <a href="mailto:nour.ibrahim5617@gmail.com" class="contact__mail" data-cursor="link">
+        nour.ibrahim5617@gmail.com
+        <span class="contact__mail-arrow">↗</span>
+      </a>
+
+      <div class="contact__row">
+        <div class="contact__col">
+          <span class="contact__label">Connect</span>
+          <a href="https://linkedin.com/in/nour-ibrahim-arch" target="_blank" data-cursor="link">LinkedIn ↗</a>
+          <a href="https://behance.net/nouribrahim16" target="_blank" data-cursor="link">Behance ↗</a>
+          <a href="#" data-cursor="link">Instagram ↗</a>
+        </div>
+        <div class="contact__col">
+          <span class="contact__label">Document</span>
+          <a href="Nour Ibrahim - CV Latest.pdf" data-cursor="link" target="_blank">Download CV (PDF) ↘</a>
+        </div>
+        <div class="contact__col">
+          <span class="contact__label">Based in</span>
+          <span>Beirut, Lebanon</span>
+          <span>+961 79 094 529</span>
+          <span>Open to relocation</span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span>© 2026 Nour Eldin Ibrahim</span>
+      <span>Designed &amp; built with care.</span>
+      <span>v.02</span>
+    </footer>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

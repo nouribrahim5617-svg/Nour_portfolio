@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+
+@page { size: A4; margin: 0; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  width: 210mm;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #1e1e1e;
+  background: #fff;
+  font-size: 7.8pt;
+  line-height: 1.42;
+}
+
+/* ── PAGE 1 ─────────────────────────────────────────────── */
+.p1 { width: 210mm; height: 297mm; overflow: hidden; page-break-after: always; }
+
+.sidebar {
+  float: left; width: 71mm; height: 297mm;
+  background: #222222; overflow: hidden;
+}
+.main {
+  margin-left: 71mm; height: 297mm;
+  padding: 8mm 9mm 8mm 10mm;
+  background: #ffffff; overflow: hidden;
+}
+
+/* Photo */
+.photo-box { width: 71mm; height: 78mm; overflow: hidden; }
+.photo-box img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 12%;
+  filter: contrast(1.04) brightness(0.99);
+  display: block;
+}
+.gold-strip { height: 3px; background: #b8924a; }
+
+/* Sidebar inner */
+.s-inner { padding: 5.5mm 7mm 6mm 7mm; }
+.s-fn { font-size: 18pt; font-weight: 900; color: #fff; letter-spacing: 0.05em; line-height: 1; }
+.s-ln { font-size: 23pt; font-weight: 900; color: #fff; letter-spacing: 0.05em; line-height: 1.05; margin-bottom: 1.8mm; }
+.s-jt { font-size: 6.2pt; font-weight: 700; color: #b8924a; letter-spacing: 0.17em; text-transform: uppercase; margin-bottom: 1.2mm; }
+.s-badge { font-size: 6.2pt; color: #c9a87c; margin-bottom: 2.5mm; }
+.s-social { margin-bottom: 3mm; }
+.s-social a { font-size: 6.8pt; color: #b8924a; text-decoration: none; margin-right: 2mm; }
+.s-rule { height: 1px; background: rgba(255,255,255,0.07); margin: 3mm 0; }
+
+.s-h {
+  font-size: 6.5pt; font-weight: 700; color: #fff;
+  letter-spacing: 0.13em; text-transform: uppercase;
+  border-bottom: 1.5px solid #b8924a;
+  padding-bottom: 0.8mm; margin-bottom: 2mm; margin-top: 4mm;
+}
+
+.c-item { font-size: 6.8pt; color: #c5c5c5; margin-bottom: 1.3mm; line-height: 1.35; }
+.c-l { color: #b8924a; font-weight: 600; }
+
+.sk { font-size: 6.8pt; color: #c5c5c5; margin-bottom: 1.2mm; padding-left: 2.8mm; position: relative; line-height: 1.35; }
+.sk::before { content: '•'; color: #b8924a; position: absolute; left: 0; }
+
+.lang { margin-bottom: 1.8mm; }
+.lang-l { font-size: 6.8pt; color: #c5c5c5; margin-bottom: 0.7mm; }
+.lang-t { width: 100%; height: 1.6px; background: rgba(255,255,255,0.1); border-radius: 1px; }
+.lang-f { height: 1.6px; background: #fff; border-radius: 1px; }
+
+.int { font-size: 6.8pt; color: #c5c5c5; margin-bottom: 1mm; padding-left: 2.8mm; position: relative; }
+.int::before { content: '–'; color: #b8924a; position: absolute; left: 0; }
+
+/* Main column headings */
+.r-h {
+  font-size: 11pt; font-weight: 800; color: #1e1e1e;
+  letter-spacing: 0.01em; margin-top: 4.5mm; margin-bottom: 1.3mm;
+}
+.r-h:first-child { margin-top: 0; }
+.r-rule { width: 9mm; height: 2.5px; background: #b8924a; margin-bottom: 2.8mm; }
+
+/* Profile */
+.profile { font-size: 7.5pt; line-height: 1.58; color: #2a2a2a; }
+.profile strong { color: #1e1e1e; }
+
+/* Award lines — prominent on page 1 */
+.a-line {
+  font-size: 7.2pt; color: #2a2a2a;
+  margin-bottom: 1.2mm; padding-left: 4mm;
+  position: relative; line-height: 1.32;
+}
+.a-line .ico { position: absolute; left: 0; color: #b8924a; }
+.a-line strong { color: #1e1e1e; }
+.a-line .yr { color: #aaa; margin-left: 1mm; font-size: 6.8pt; }
+.a-sub { font-size: 6.8pt; color: #777; font-style: italic; }
+
+/* Entry layout */
+.entry { overflow: hidden; margin-bottom: 1.6mm; }
+.e-l { float: left; width: 28mm; padding-right: 2.5mm; }
+.e-r { margin-left: 29mm; }
+.e-date { font-size: 6.8pt; color: #999; margin-bottom: 0.5mm; }
+.e-role { font-size: 7.5pt; font-weight: 700; color: #1e1e1e; line-height: 1.2; margin-bottom: 0.4mm; }
+.e-org  { font-size: 7pt; color: #b8924a; font-weight: 600; line-height: 1.25; margin-bottom: 0.3mm; }
+.e-loc  { font-size: 6.5pt; color: #bbb; }
+.eb { font-size: 7pt; color: #2a2a2a; margin-bottom: 0.6mm; padding-left: 3mm; position: relative; line-height: 1.3; }
+.eb::before { content: '–'; color: #b8924a; position: absolute; left: 0; }
+.eb strong { color: #1e1e1e; }
+.sep { height: 1px; background: #f0f0f0; margin: 1mm 0 1.4mm; }
+
+/* RIBA badge */
+.riba-badge {
+  display: inline-block;
+  font-size: 6.5pt; font-weight: 700;
+  color: #b8924a; border: 1px solid #b8924a;
+  padding: 0.5mm 2mm; border-radius: 2px;
+  margin-left: 2mm; vertical-align: middle;
+  letter-spacing: 0.05em;
+}
+
+/* ── PAGE 2 ─────────────────────────────────────────────── */
+.p2 { width: 210mm; page-break-before: always; }
+
+.p2-header { background: #222222; padding: 4mm 10mm; overflow: hidden; }
+.p2-name  { float: left; font-size: 13pt; font-weight: 900; color: #fff; letter-spacing: 0.05em; }
+.p2-title { float: right; font-size: 6.8pt; color: #b8924a; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 1.8mm; }
+.p2-gold  { height: 3px; background: #b8924a; clear: both; }
+.p2-body  { padding: 7mm 12mm 12mm 12mm; }
+
+.p2-cols { overflow: hidden; }
+.p2-left  { float: left; width: 49%; padding-right: 5mm; }
+.p2-right { float: right; width: 49%; }
+
+.ws { margin-bottom: 2.5mm; }
+.ws-title { font-size: 7.5pt; font-weight: 700; color: #1e1e1e; margin-bottom: 0.3mm; }
+.ws-meta  { font-size: 6.5pt; color: #b8924a; margin-bottom: 0.5mm; }
+.ws-body  { font-size: 7pt; color: #2a2a2a; line-height: 1.38; }
+
+/* Software grid */
+.sw-wrap { overflow: hidden; }
+.sw-item { float: left; width: 50%; margin-bottom: 1.6mm; padding-right: 4mm; overflow: hidden; }
+.sw-name { font-size: 7pt; color: #2a2a2a; float: left; width: 23mm; margin-top: 1.2mm; }
+.sw-track { margin-left: 24mm; height: 3px; background: #e8e8e8; border-radius: 2px; margin-top: 1.5mm; }
+.sw-fill  { height: 3px; background: #222222; border-radius: 2px; }
+.sw-cl { clear: both; }
+
+</style>
+</head>
+<body>
+
+<!-- ══════════════ PAGE 1 ══════════════ -->
+<div class="p1">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="photo-box">
+      <img src="Profile Photo.jpg" alt="Nour Ibrahim">
+    </div>
+    <div class="gold-strip"></div>
+    <div class="s-inner">
+      <div class="s-fn">NOUR ELDIN</div>
+      <div class="s-ln">IBRAHIM</div>
+      <div class="s-jt">Architecture Designer &amp; Visualizer</div>
+      <div class="s-badge">✦ 2× Award-Winning · RIBA Part 1</div>
+      <div class="s-social">
+        <a href="https://linkedin.com/in/nour-ibrahim-arch/">LinkedIn</a>
+        <a href="https://behance.net/nouribrahim16">Behance</a>
+        <a href="https://instagram.com/vividesigns_4/">Instagram</a>
+      </div>
+      <div class="s-rule"></div>
+
+      <div class="s-h">Contact</div>
+      <div class="c-item"><span class="c-l">Email </span>nour.ibrahim5617@gmail.com</div>
+      <div class="c-item"><span class="c-l">Phone </span>+961 79 094 529</div>
+      <div class="c-item"><span class="c-l">Location </span>Beirut, Lebanon</div>
+
+      <div class="s-h">Skills</div>
+      <div class="sk">Revit BIM — Design &amp; Construction Phase</div>
+      <div class="sk">AI Skills — Midjourney, Firefly, AI Render</div>
+      <div class="sk">Parametric &amp; Computational Design</div>
+      <div class="sk">Architectural Rendering &amp; Visualization</div>
+      <div class="sk">3D Modelling — Blender · Rhino · 3ds Max</div>
+      <div class="sk">Graphic Design — Ps · Ai · Id</div>
+      <div class="sk">Urban Planning Regulations</div>
+      <div class="sk">Physical Model Making</div>
+      <div class="sk">Team Leadership &amp; Coordination</div>
+
+      <div class="s-h">Languages</div>
+      <div class="lang">
+        <div class="lang-l">Arabic — Native</div>
+        <div class="lang-t"><div class="lang-f" style="width:100%"></div></div>
+      </div>
+      <div class="lang">
+        <div class="lang-l">English — Fluent</div>
+        <div class="lang-t"><div class="lang-f" style="width:88%"></div></div>
+      </div>
+
+      <div class="s-h">Interests</div>
+      <div class="int">Sketching &amp; Manual Drawing</div>
+      <div class="int">Digital Art &amp; Model Making</div>
+      <div class="int">Photography &amp; Videography</div>
+      <div class="int">3D Visualization &amp; Animation</div>
+      <div class="int">Graphic Design</div>
+    </div>
+  </div>
+
+  <!-- MAIN COLUMN -->
+  <div class="main">
+
+    <!-- ① PROFILE — personal statement of interests and aims -->
+    <div class="r-h">Profile</div>
+    <div class="r-rule"></div>
+    <p class="profile">
+      I am drawn to architecture as a discipline that shapes human behaviour — how a threshold, a shared
+      courtyard, or a carefully placed opening alters the way people feel and move through space. My work
+      gravitates toward community-centred design and the humanitarian potential of material-conscious
+      construction, with competitions as my primary mode of inquiry. I am seeking a Master's programme in
+      sustainable design, ecological responsiveness, and the social agency of architecture.
+    </p>
+
+    <!-- ② AWARDS & COMPETITIONS — moved to page 1 for immediate impact -->
+    <div class="r-h">Awards &amp; Competitions</div>
+    <div class="r-rule"></div>
+
+    <div class="a-line">
+      <span class="ico">★</span>
+      <strong>Recognition Award — Luxor Order of Engineers HQ Competition</strong>
+      <span class="yr">2026</span><br>
+      <span class="a-sub">Algorithm Architects · led team of 6 · 55+ competing firms across Egypt · 80% visual contribution</span>
+    </div>
+    <div class="a-line">
+      <span class="ico">★</span>
+      <strong>1st Place — BAU Narratives Architecture Competition</strong>
+      <span class="yr">2025</span><br>
+      <span class="a-sub">Project: Therapy Block A</span>
+    </div>
+    <div class="a-line">
+      <span class="ico">★</span>
+      <strong>Commendation — RIBA Norman Foster Travelling Scholarship</strong>
+      <span class="yr">2026</span>
+    </div>
+    <div class="a-line">
+      <span class="ico">◆</span>
+      <strong>Shortlisted — Buildner: Hospice – Home for the Terminally Ill #5</strong>
+      <span class="yr">2026</span><br>
+      <span class="a-sub">AD'OR – Adobe &amp; Salt · Siwa Oasis, Egypt · international competition</span>
+    </div>
+    <div class="a-line"><span class="ico">◆</span>120 Hours International Architecture Competition — The Art of Losing, Oslo<span class="yr"> 2025</span></div>
+    <div class="a-line"><span class="ico">◆</span>Kaira Looro Architecture Competition<span class="yr"> Ongoing</span></div>
+    <div class="a-line"><span class="ico">◆</span>FutureArc Prize 2024 — Architecture for Life After · BCI Central / FutureArc Journal<span class="yr"> 2024</span></div>
+    <div class="a-line"><span class="ico">◆</span>Museum of Emotions #4 · International VELUX Award 2024 (Ephemeral Luminance)<span class="yr"> 2024</span></div>
+    <div class="a-line"><span class="ico">◆</span>1st Place — AL MAKKASSED Drawing Competition<span class="yr"> 2015–16</span></div>
+
+    <!-- ③ EDUCATION — with RIBA Part 1 -->
+    <div class="r-h">Education</div>
+    <div class="r-rule"></div>
+
+    <div class="entry">
+      <div class="e-l">
+        <div class="e-date">2022 – Present</div>
+        <div class="e-role">B.Arch — Architectural Engineering &amp; Environmental Design</div>
+        <div class="e-org">Beirut Arab University</div>
+        <div class="e-loc">Beirut, Lebanon</div>
+      </div>
+      <div class="e-r">
+        <div class="eb"><strong>GPA 3.88 / 4.0</strong> &nbsp;·&nbsp; <strong>RIBA Part 1</strong> <span style="font-size:6.5pt; color:#777;">(ARB/RIBA Prescribed Programme)</span></div>
+        <div class="eb">Scholarships: Algorithm Rome Summer School (AANT, Italy 2024) · Kassel Reloaded Design-Build Workshop (DAAD / Kassel University, Germany 2024)</div>
+        <div class="eb">RIBA Mapping Committee student representative, 2022–2024</div>
+      </div>
+    </div>
+    <div class="sep"></div>
+    <div class="entry">
+      <div class="e-l">
+        <div class="e-date">2016 – 2022</div>
+        <div class="e-role">High School Diploma — Life Science</div>
+      </div>
+      <div class="e-r">
+        <div class="eb">Makassed Islamic High School, Saida &nbsp;·&nbsp; Rank: Very Good (17.22 / 20)</div>
+      </div>
+    </div>
+
+    <!-- ④ EXPERIENCE — condensed, supporting role on page 1 -->
+    <div class="r-h">Professional Experience</div>
+    <div class="r-rule"></div>
+
+    <div class="entry">
+      <div class="e-l">
+        <div class="e-date">2025</div>
+        <div class="e-role">Architectural Intern</div>
+        <div class="e-org">MVRDV (Collaborative Project)</div>
+        <div class="e-loc">Italy</div>
+      </div>
+      <div class="e-r">
+        <div class="eb">Community centre for people with special needs — collaborative project with MVRDV; kinetic façade design and surrounding urban redesign</div>
+      </div>
+    </div>
+    <div class="sep"></div>
+
+    <div class="entry">
+      <div class="e-l">
+        <div class="e-date">Nov 2025 – Present</div>
+        <div class="e-role">Architectural Intern</div>
+        <div class="e-org">Algorithm Architects</div>
+        <div class="e-loc">Rome, Italy (Remote)</div>
+      </div>
+      <div class="e-r">
+        <div class="eb"><strong>Luxor competition</strong> — team lead (6 members); concept-to-detail Revit BIM; 8 × 70×100 cm presentation sheets; AI-integrated visualization</div>
+        <div class="eb"><strong>Podgorica competition</strong> (Montenegro, 18,600 sqm) — landscape design, international codes, submission boards</div>
+        <div class="eb"><strong>AD'OR</strong> — Buildner Hospice #5; vernacular Revit modelling, Siwa Oasis, Egypt</div>
+      </div>
+    </div>
+    <div class="sep"></div>
+
+    <div class="entry">
+      <div class="e-l">
+        <div class="e-date">Jul – Aug 2025</div>
+        <div class="e-role">Architectural Intern</div>
+        <div class="e-org">LDRS – Chehab &amp; Partners</div>
+        <div class="e-loc">Beirut, Lebanon</div>
+      </div>
+      <div class="e-r">
+        <div class="eb">Hamra &amp; Rawche Residential Towers — Revit design + construction documentation; Beirut Zone 1 regulations (T.E.F., S.E.F.); AI-enhanced rendering</div>
+      </div>
+    </div>
+    <div class="sep"></div>
+
+    <div class="entry">
+      <div class="e-l">
+        <div class="e-date">Dec 2025 – Jan 2026</div>
+        <div class="e-role">Architectural Intern</div>
+        <div class="e-org">Narratives Architectural Consulting</div>
+        <div class="e-loc">Cairo, Egypt (Remote)</div>
+      </div>
+      <div class="e-r">
+        <div class="eb">Ekramy Villa — interior design, Revit 3D modelling, AI-integrated photorealistic visualization</div>
+      </div>
+    </div>
+    <div class="sep"></div>
+
+    <div class="entry">
+      <div class="e-l">
+        <div class="e-date">Jul – Aug 2023</div>
+        <div class="e-role">Architectural Intern</div>
+        <div class="e-org">Archivision Architects</div>
+        <div class="e-loc">Alexandria, Egypt</div>
+      </div>
+      <div class="e-r">
+        <div class="eb">Saudi Arabia Villa Complex — AutoCAD construction documents, site supervision, construction-phase coordination</div>
+      </div>
+    </div>
+
+  </div><!-- /.main -->
+</div><!-- /.p1 -->
+
+
+<!-- ══════════════ PAGE 2 ══════════════ -->
+<div class="p2">
+
+  <div class="p2-header">
+    <span class="p2-name">NOUR ELDIN IBRAHIM</span>
+    <span class="p2-title">Architecture Designer · RIBA Part 1 · 2× Award-Winning</span>
+  </div>
+  <div class="p2-gold"></div>
+
+  <div class="p2-body">
+    <div class="p2-cols">
+
+      <!-- LEFT: Workshops + Community -->
+      <div class="p2-left">
+
+        <div class="r-h" style="margin-top:0;">International Workshops</div>
+        <div class="r-rule"></div>
+
+        <div class="ws">
+          <div class="ws-title">Algorithm Rome Summer School</div>
+          <div class="ws-meta">AANT – Academy of Art &amp; New Technology · Rome, Italy · 2024 · Scholarship</div>
+          <div class="ws-body">Responsive Parametric Facade Design; Architecture Branding Identity; student facade competition</div>
+        </div>
+
+        <div class="ws">
+          <div class="ws-title">Kassel Reloaded: Design-Build Workshop</div>
+          <div class="ws-meta">DAAD Ta'ziz / Kassel University · Germany · 2024 · Scholarship</div>
+          <div class="ws-body">Revitalised Olof-Palme-Haus community centre through urban acupuncture; upcycled materials into kiosks, seating, pavilion; cross-university team</div>
+        </div>
+
+        <div class="ws">
+          <div class="ws-title">GIS &amp; Sustainability Workshop</div>
+          <div class="ws-meta">BAU Environmental &amp; Geographic Studies Lab · 2024</div>
+          <div class="ws-body">GIS-based eco-friendly location analysis for sustainable urban initiatives</div>
+        </div>
+
+        <div class="ws">
+          <div class="ws-title">Zero Energy Houses Using BIM</div>
+          <div class="ws-meta">BAU Environmental &amp; Geographic Studies Lab · 2024</div>
+          <div class="ws-body">BIM-driven energy optimisation: solar gain, insulation, material selection for net-zero residential design</div>
+        </div>
+
+        <div class="ws">
+          <div class="ws-title">RIBA Mapping Committee Workshops</div>
+          <div class="ws-meta">BAU + RIBA · 2022–2024 · Student Representative</div>
+          <div class="ws-body">Mapping workshops, BAU Students-to-Students Lecture, design thinking &amp; curriculum alignment</div>
+        </div>
+
+        <div class="r-h">Community &amp; University Projects</div>
+        <div class="r-rule"></div>
+
+        <div class="ws">
+          <div class="ws-title">Saida's Bab EL Saray Renovation</div>
+          <div class="ws-meta">BAU + Zeidan Association · 2024–2025 · Saida, Lebanon</div>
+          <div class="ws-body">Design proposals, model-making, and graphic presentations for historic square revitalisation</div>
+        </div>
+
+        <div class="ws">
+          <div class="ws-title">Saida Urban Sustainability Project</div>
+          <div class="ws-meta">Hariri Foundation / OLA · 2025</div>
+          <div class="ws-body">Culture-community urban solutions for Old and New Saida</div>
+        </div>
+
+        <div class="ws">
+          <div class="ws-title">Faculty of Architecture — 3D Scanning &amp; VR Modelling</div>
+          <div class="ws-meta">BAU Virtual Reality Lab · 2024</div>
+          <div class="ws-body">Virtual model via 360° photo survey and full VR scanning of faculty spaces</div>
+        </div>
+
+      </div><!-- /.p2-left -->
+
+      <!-- RIGHT: Software + Contact -->
+      <div class="p2-right">
+
+        <div class="r-h" style="margin-top:0;">Software Expertise</div>
+        <div class="r-rule"></div>
+
+        <div class="sw-wrap">
+          <div class="sw-item"><span class="sw-name">AutoCAD</span><div class="sw-track"><div class="sw-fill" style="width:100%"></div></div></div>
+          <div class="sw-item"><span class="sw-name">Revit / BIM</span><div class="sw-track"><div class="sw-fill" style="width:100%"></div></div></div>
+          <div class="sw-cl"></div>
+          <div class="sw-item"><span class="sw-name">Photoshop</span><div class="sw-track"><div class="sw-fill" style="width:82%"></div></div></div>
+          <div class="sw-item"><span class="sw-name">Illustrator</span><div class="sw-track"><div class="sw-fill" style="width:82%"></div></div></div>
+          <div class="sw-cl"></div>
+          <div class="sw-item"><span class="sw-name">SketchUp</span><div class="sw-track"><div class="sw-fill" style="width:78%"></div></div></div>
+          <div class="sw-item"><span class="sw-name">Twinmotion</span><div class="sw-track"><div class="sw-fill" style="width:78%"></div></div></div>
+          <div class="sw-cl"></div>
+          <div class="sw-item"><span class="sw-name">Blender</span><div class="sw-track"><div class="sw-fill" style="width:62%"></div></div></div>
+          <div class="sw-item"><span class="sw-name">Rhino / GH</span><div class="sw-track"><div class="sw-fill" style="width:62%"></div></div></div>
+          <div class="sw-cl"></div>
+          <div class="sw-item"><span class="sw-name">InDesign</span><div class="sw-track"><div class="sw-fill" style="width:78%"></div></div></div>
+          <div class="sw-item"><span class="sw-name">3ds Max · Rayon</span><div class="sw-track"><div class="sw-fill" style="width:58%"></div></div></div>
+          <div class="sw-cl"></div>
+          <div class="sw-item"><span class="sw-name">AI Design Tools</span><div class="sw-track"><div class="sw-fill" style="width:100%"></div></div></div>
+          <div class="sw-cl"></div>
+        </div>
+
+        <p style="font-size:6.5pt; color:#b8924a; margin-top:1mm; margin-bottom:1.5mm; line-height:1.5;">
+          ★ Revit proficient across Design Phase (schematic → detail) and Construction Phase (documentation, coordination)<br>
+          ★ AI Tools: Midjourney, Adobe Firefly, AI-assisted render workflows — integrated across all internships
+        </p>
+
+        <!-- Spacer before contact repeat -->
+        <div style="margin-top: 6mm; border-top: 1px solid #efefef; padding-top: 5mm;">
+          <div style="font-size:6.5pt; font-weight:700; color:#b8924a; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:2mm;">Contact</div>
+          <div style="font-size:7pt; color:#444; line-height:1.7;">
+            nour.ibrahim5617@gmail.com<br>
+            +961 79 094 529 · Beirut, Lebanon<br>
+            linkedin.com/in/nour-ibrahim-arch<br>
+            behance.net/nouribrahim16
+          </div>
+        </div>
+
+      </div><!-- /.p2-right -->
+    </div>
+  </div>
+</div><!-- /.p2 -->
+
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

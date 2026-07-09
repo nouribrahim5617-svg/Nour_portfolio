@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urban Seedbed — Nour Ibrahim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,200;9..144,300;9..144,400;9..144,500;9..144,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+  <style>
+    /* Urban Seedbed — sage / olive green */
+    :root { --accent: #7E8C5E; --accent-soft: #66724b; }
+    /* Feature image: white canvas to match the aerial's bg,
+       but constrained in size so the building reads clearly */
+    .p-feature__img--contain {
+      background-color: #ffffff;
+      background-size: 80% auto;          /* keep the building large but framed */
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 60vh;                        /* shorter so it doesn't look stretched */
+      max-width: 1200px;
+      margin: 0 auto 16px;
+      border: 1px solid var(--rule);       /* subtle frame so the white panel reads as a panel */
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor cursor--ring" id="cursorRing"></div>
+
+  <header class="nav">
+    <a href="../index.html" class="nav__brand" data-cursor="link">
+      <span class="nav__brand-mark">N·I</span>
+      <span class="nav__brand-name">Nour Eldin Ibrahim</span>
+    </a>
+    <nav class="nav__links">
+      <a href="../index.html#hero"     class="nav__link" data-cursor="link"><span>01</span> Home</a>
+      <a href="../index.html#about"    class="nav__link" data-cursor="link"><span>02</span> About</a>
+      <a href="../index.html#projects" class="nav__link" data-cursor="link"><span>03</span> Projects</a>
+      <a href="../index.html#contact"  class="nav__link" data-cursor="link"><span>04</span> Contact</a>
+    </nav>
+  </header>
+
+  <section class="p-hero">
+    <div class="p-hero__meta">
+      <a href="../index.html#projects" class="p-hero__back" data-cursor="link">← All projects</a>
+      <span>Project · 04 / 11</span>
+    </div>
+
+    <h1 class="p-hero__title"><em>Urban</em><br/>Seedbed</h1>
+    <p class="p-hero__concept">Cultivating a regenerative community — affordable housing, Beirut</p>
+
+    <div class="p-hero__facts">
+      <div><span class="lbl">Location</span><span>Al Hadath, Beirut</span></div>
+      <div><span class="lbl">Programme</span><span>Affordable housing</span></div>
+      <div><span class="lbl">Material</span><span>Reclaimed containers</span></div>
+      <div><span class="lbl">Scope</span><span>University studio</span></div>
+      <div><span class="lbl">School</span><span>Beirut Arab University</span></div>
+    </div>
+  </section>
+
+  <section class="p-feature">
+    <div class="p-feature__img p-feature__img--contain"
+         style="background-image:url('../Urban%20Seedbed/Top%20View.jpg')"></div>
+    <p class="p-feature__caption">Aerial axonometric · the regenerated block</p>
+  </section>
+
+  <section class="p-section">
+    <div class="p-grid p-grid--brief">
+      <div class="p-brief__label">
+        <span class="lbl">[ 01 ]</span>
+        <h3>Brief</h3>
+      </div>
+      <div class="p-brief__body">
+        <p class="lead">
+          A re-imagining of discarded shipping containers — once symbols of disconnected
+          trade — as the building blocks for a grounded, interdependent community.
+        </p>
+        <p>
+          The proposal stitches together a fragmented landscape in Al Hadath, Beirut,
+          through architecture that prioritises restoration and social interaction.
+          The design is less about a single aesthetic and more about using architecture
+          as a medium for storytelling and societal change.
+        </p>
+        <p>
+          The core concept — <em>Cultivating a Regenerative Community</em> — frames the
+          project as a seedbed: small, repeated units that, over time, grow into a
+          living neighbourhood.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-images p-images--duo">
+    <figure>
+      <div class="p-img" style="background-image:url('../Urban%20Seedbed/Elevations%20and%20sections.jpg');background-size:contain;background-color:#fff;background-repeat:no-repeat"></div>
+      <figcaption>Elevations &amp; sections</figcaption>
+    </figure>
+    <figure>
+      <div class="p-img" style="background-image:url('../Urban%20Seedbed/edited%20typical.jpg');background-size:contain;background-color:#fff;background-repeat:no-repeat"></div>
+      <figcaption>Typical unit · plan</figcaption>
+    </figure>
+  </section>
+
+  <section class="p-section">
+    <div class="p-grid p-grid--brief">
+      <div class="p-brief__label">
+        <span class="lbl">[ 02 ]</span>
+        <h3>Strategy</h3>
+      </div>
+      <div class="p-brief__body">
+        <p>
+          Containers are stacked and offset to form shared roof terraces, community
+          gardens, and shaded outdoor rooms. Reds, greens and natural timbers
+          differentiate functions: living, planting, and gathering.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-images p-images--trio">
+    <figure>
+      <div class="p-img" style="background-image:url('../Urban%20Seedbed/Artboard%203.jpg');background-size:contain;background-color:#fff;background-repeat:no-repeat"></div>
+      <figcaption>Concept diagrams</figcaption>
+    </figure>
+    <figure>
+      <div class="p-img" style="background-image:url('../Urban%20Seedbed/Artboard%204.jpg');background-size:contain;background-color:#fff;background-repeat:no-repeat"></div>
+      <figcaption>Programme studies</figcaption>
+    </figure>
+    <figure>
+      <div class="p-img" style="background-image:url('../Urban%20Seedbed/Artboard%205.jpg');background-size:contain;background-color:#fff;background-repeat:no-repeat"></div>
+      <figcaption>Module logic</figcaption>
+    </figure>
+  </section>
+
+  <section class="p-images p-images--trio">
+    <figure>
+      <div class="p-img" style="background-image:url('../Urban%20Seedbed/Artboard%206.jpg');background-size:contain;background-color:#fff;background-repeat:no-repeat"></div>
+      <figcaption>Site strategy</figcaption>
+    </figure>
+    <figure>
+      <div class="p-img" style="background-image:url('../Urban%20Seedbed/Artboard%207.jpg');background-size:contain;background-color:#fff;background-repeat:no-repeat"></div>
+      <figcaption>Material studies</figcaption>
+    </figure>
+    <figure>
+      <div class="p-img" style="background-image:url('../Urban%20Seedbed/Artboard%208.jpg');background-size:contain;background-color:#fff;background-repeat:no-repeat"></div>
+      <figcaption>Process</figcaption>
+    </figure>
+  </section>
+
+  <section class="p-next">
+    <a href="project-05.html" class="p-next__link" data-cursor="enter">
+      <span class="lbl">Next project</span>
+      <h2 class="p-next__title"><em>05 ·</em> Ekramy Villa</h2>
+      <span class="p-next__arrow">↗</span>
+    </a>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact__inner" style="padding-top: 60px;">
+      <div class="contact__row" style="border-top:none;">
+        <div class="contact__col">
+          <span class="contact__label">Email</span>
+          <a href="mailto:nour.ibrahim5617@gmail.com" data-cursor="link">nour.ibrahim5617@gmail.com</a>
+        </div>
+        <div class="contact__col">
+          <span class="contact__label">CV</span>
+          <a href="../Nour%20Ibrahim%20-%20CV%20Latest.pdf" data-cursor="link" target="_blank">Download (PDF) ↘</a>
+        </div>
+        <div class="contact__col">
+          <span class="contact__label">Connect</span>
+          <a href="#" data-cursor="link">Instagram ↗</a>
+          <a href="#" data-cursor="link">LinkedIn ↗</a>
+        </div>
+      </div>
+      <div class="footer">
+        <span>© 2026 Nour Ibrahim</span>
+        <span>Urban Seedbed</span>
+        <span>v.01</span>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
