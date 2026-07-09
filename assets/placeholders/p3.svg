@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1a1a"/>
+      <stop offset="1" stop-color="#2a2520"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#g3)"/>
+  <!-- Pavilion - thin columns and roof -->
+  <g stroke="rgba(255,255,255,0.7)" stroke-width="1.5" fill="none">
+    <line x1="150" y1="350" x2="650" y2="350"/>
+    <line x1="150" y1="370" x2="650" y2="370"/>
+    <line x1="180" y1="370" x2="180" y2="850"/>
+    <line x1="290" y1="370" x2="290" y2="850"/>
+    <line x1="400" y1="370" x2="400" y2="850"/>
+    <line x1="510" y1="370" x2="510" y2="850"/>
+    <line x1="620" y1="370" x2="620" y2="850"/>
+    <line x1="100" y1="850" x2="700" y2="850"/>
+  </g>
+  <!-- subtle people scale -->
+  <g fill="rgba(0,51,255,0.8)">
+    <circle cx="240" cy="820" r="5"/>
+    <rect x="237" y="825" width="6" height="25"/>
+    <circle cx="450" cy="820" r="5"/>
+    <rect x="447" y="825" width="6" height="25"/>
+  </g>
+  <text x="60" y="60" fill="rgba(255,255,255,0.5)" font-family="Inter" font-size="14" letter-spacing="4">PROJECT · 03</text>
+  <text x="60" y="950" fill="rgba(255,255,255,0.8)" font-family="Fraunces" font-style="italic" font-size="32">Threshold Pavilion</text>
+</svg>
